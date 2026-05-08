@@ -27,7 +27,7 @@ public class Lab2P1_CarlosFernandez {
          System.out.println("1: Permutaciones");
          System.out.println("2: Valores Comunes en Multiplicacion:");
          System.out.println("3: Triangulos Huecos");
-         System.out.println("4: Para Salir ingrese 0");
+         System.out.println("Para Salir ingrese 0");
          
          System.out.print("Ingrese su eleccion:");
          
@@ -53,30 +53,69 @@ public class Lab2P1_CarlosFernandez {
                  // Aqui es para que se ejecute siempre y cuando los datos sean ciertos 
                  
                  
+                 long Numerador=1;
+                 // probe con el double como me dijo diego pero temine usando long para que no me diera decimal 
+                 
+                 // para el numerador del factorial utilizamos el Factorial de N solamente
+                 for(int i=1 ; i<=n; i++ ){
+                 Numerador=Numerador*i;
+                 }
                  
                  
+                 long Denominador=1;
                  
+                 for(int i=1; i<=(n-r); i++){
+                 Denominador=Denominador*i;
+                 }
                  
-                     
-                             
-                 
-                 
-                                                                   
+                 long resultado=Numerador/Denominador;
+                 System.out.println("Resultado de P("+n+", "+r+")="+resultado);
+                                                                                                                                                        
+                                                                                                     
                  break;
                 
              case 2:
                  System.out.println("\n------Usted selecciono Valores Comunes en Multiplicacion------");
+                 int num1, num2;
+                 do {
+                     System.out.println("Ingrese un numero del 1 al 12:");
+                     num1=leer.nextInt();
+                     //Aqui solicitamos el numero del usuario 
+                     
+               
                  
+                     if(num1<1 || num1>12);{
+                     System.out.println(" Error el numero debe de estar entre 1 y 12");
+                     // Aqui validamos el si el numero esta entre 1 y 12 y si no lo solicitamos de nuevo 
+                     
+                     
+                 }
+                 }while (num1<1 || num1>12);
+                 
+                 do{
+                     System.out.println("Ingrese otro numero del 1 al 12");
+                     num2=leer.nextInt();
+                     
+                     
+                     if(num2<1 || num2>12);{
+                     System.out.println("Error el numero debe de estar entre 1 y 12");
+                 }
+                 
+                 }while(num2<1 || num2>12);
+                 
+                 
+                     
+                                                                   
                  
                  break;
              case 3:
                  System.out.println("\n----------Usted selecciono Triangulos Huecos-------");
                  
-                 //Fue mala mia no pude hablar con la ingeniera ;( le voy a preguntar de hoy en adelante 
+                 
                  
                  break;
                  
-             case 4:
+             case 0:
                  
                  System.out.println("\n-------Usted selecciono Salir-------");
                  
